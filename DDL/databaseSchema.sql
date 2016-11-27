@@ -1,3 +1,5 @@
+CREATE SCHEMA IF NOT EXISTS `loshs_compartidos` DEFAULT CHARACTER SET utf8 
+
 CREATE TABLE IF NOT EXISTS `loshs_compartidos`.`Categories` (
   `iCategoriesId` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `sCategoryName` VARCHAR(100) NOT NULL,
@@ -19,17 +21,6 @@ CREATE TABLE IF NOT EXISTS `loshs_compartidos`.`User` (
   `sPassword` VARCHAR(50) NOT NULL,
   `sLocationSource` VARCHAR(45) NULL,
   PRIMARY KEY (`iUserId`))
-ENGINE = InnoDB
-
-
-CREATE TABLE IF NOT EXISTS `loshs_compartidos`.`Categories` (
-  `iCategoriesId` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `sCategoryName` VARCHAR(100) NOT NULL,
-  `dtCreated` DATETIME NULL,
-  `dtDeleted` DATETIME NULL,
-  `lastModifiedDate` DATETIME NULL,
-  `Categoriescol` VARCHAR(45) NULL,
-  PRIMARY KEY (`iCategoriesId`))
 ENGINE = InnoDB
 
 CREATE TABLE IF NOT EXISTS `loshs_compartidos`.`Offers` (
